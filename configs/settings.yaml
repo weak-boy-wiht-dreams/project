@@ -1,0 +1,26 @@
+# 服务配置
+log_level: INFO
+port: 8080
+
+# 认证配置
+enable_auth: true
+api_keys:
+  - "your-secure-api-key"
+
+# 模型配置，在这里输入要添加的模型文件的地址
+models:
+  logistic_regression_path: "./pretrained/logistic_regression_model.pkl"
+  nn_path: "./pretrained/nn_model.pkl"
+# 性能配置
+concurrent:
+  #最大电桩数量
+  max_concurrent_sources: 50
+  #一个电桩的最大并行的模型的数量
+  model_workers: 8
+
+  predict_timeout: 5.0
+
+# 缓存配置
+cache:
+  maxsize: 5000
+  ttl: 300  # 5分钟

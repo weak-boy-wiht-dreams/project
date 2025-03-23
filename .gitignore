@@ -1,0 +1,4 @@
+*.csv
+*wait-traning/fire_detection/data/
+*wait-traning/fire_detection/train/
+**wait-traning/fire_detection/val
